@@ -9,7 +9,7 @@ export const getStoreById = (req, res) => {
   const store = stores.find((s) => s.id === requestedId);
 
   if (!store) {
-    return res.status(404).json({ message: "Store non trovato" });
+    return res.status(404).json({ message: "Store not found" });
   }
 
   res.json(store);
